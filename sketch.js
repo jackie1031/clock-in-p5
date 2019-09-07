@@ -7,7 +7,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(80);
   frameRate(30);
   stroke(255);
   
