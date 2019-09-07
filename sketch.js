@@ -1,3 +1,4 @@
+// Note: the branch and star functions are from p5.js official website with slight change in parameters.
 
 let theta;
 
@@ -23,7 +24,7 @@ function draw() {
   translate(width * 0.9, height * 0.2);
   fill(250,250,0,200);
   rotate(minute());
-  star(20, 0, 20, 50, 5);
+  star(20, 0, 20, 40, 5);
   pop();
   
   // Let's pick an angle 0 to 90 degrees based on the mouse position
@@ -42,12 +43,12 @@ function draw() {
 }
 
 function branch(h) {
-  // Each branch will be 2/3rds the size of the previous one
-  h *= 0.66;
+  // Each branch will be about 2/3rds the size of the previous one
+  h *= 0.6;
 
   // All recursive functions must have an exit condition!!!!
   // Here, ours is when the length of the branch is 2 pixels or less
-  if (h > 2) {
+  if (h > 3) {
     push();    // Save the current state of transformation (i.e. where are we now)
     rotate(theta);   // Rotate by theta
     line(0, 0, 0, -h);  // Draw the branch
